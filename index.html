@@ -82,8 +82,12 @@
           <div class="col-md-8 mt-lg-5 text-center">
             <!--<h1 class="text-uppercase" data-aos="fade-up">Lyle Corp</h1>-->
             <h1 class="mb-2 site-logo">Lyle Corp<span class="text-primary">.</span></h1>
-            <p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100">O futuro começa agora</p>
-            <div data-aos="fade-up" data-aos-delay="100">
+            <div class="" id="typed-strings">
+              <p>O futuro começa agora</p>
+
+            </div>
+            <span class="desc text-white" id="typed"></span>
+            <div class="mt-5" data-aos="fade-up" data-aos-delay="100">
               <a href="#contact-section" class="btn smoothscroll btn-primary mr-2 mb-2">Contate-nos</a>
             </div>
           </div>
@@ -682,9 +686,14 @@
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
   <script src="js/isotope.pkgd.min.js"></script>
-
-
   <script src="js/main.js"></script>
+  <script src="js/typed.js"></script>
+  <script>
+    var typed = new Typed('#typed', {
+      stringsElement: '#typed-strings',
+      typeSpeed: 65
+    });
+  </script>
 
 </body>
 
