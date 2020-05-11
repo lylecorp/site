@@ -7,9 +7,16 @@
 jQuery(document).ready(function($) {
 
 	"use strict";
-
 	
-	$(".loader").delay(1000).fadeOut("slow");
+	setTimeout(function () {
+		$(".loader").fadeOut("slow");
+		var typed = new Typed('#typed', {
+		  stringsElement: '#typed-strings',
+		  typeSpeed: 65
+		});
+	  }, 1000)
+	
+	
   $("#overlayer").delay(1000).fadeOut("slow");	
   
 
