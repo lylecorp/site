@@ -543,7 +543,7 @@ body:after {
     -webkit-box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.1);
     box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.1); }
     .sticky-wrapper.is-sticky .site-navbar .site-menu-toggle {
-      color: #000; }
+      color: #fff; }
     .sticky-wrapper.is-sticky .site-navbar .site-logo a {
       color: #fff; }
     .sticky-wrapper.is-sticky .site-navbar .site-menu > li > a {
