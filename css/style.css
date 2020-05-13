@@ -1096,11 +1096,13 @@ body:after {
 
 .unit-4 .unit-4-icon span {
   display: block;
-  font-size: 3rem; }
+  font-size: 3rem; 
+  margin-bottom: 20px;
+}
 
 .unit-4 h3 {
   font-size: 20px;
-  color: #fff; }
+  color: #000; }
 
 .h-entry img {
   margin-bottom: 30px; }
@@ -1686,7 +1688,7 @@ body:after {
       color: #fff; }
 
 .team-member h3 {
-  color: #fff;
+  color: #000;
   margin: 0;
   bottom: 0;
   font-size: 1.2rem; }
@@ -2029,6 +2031,9 @@ figure figcaption {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
+
+/*CUSTOMIZAÇÕES LYLE CORP*/
+
 .btn-pink {
   background-color: rgb(198, 13, 34);
   color: #fff;
@@ -2042,7 +2047,7 @@ figure figcaption {
   color: rgb(198, 13, 34);
 }
 
-#team-section p {
+#services-section h3 {
   color: #fff;
 }
 
@@ -2068,4 +2073,37 @@ figure figcaption {
 
 #contact-section a {
   color: #000;
+}
+
+/*.divComHover {
+  cursor: pointer;
+}
+
+.divComHover:hover {
+  transition: all ease-in 0.1s;
+  border: 1px solid;
+  border-radius: 7px;
+  border-color: rgb(198, 13, 34);
+}*/
+
+.about-item {
+    color: #000;
+}
+
+.about-item a{
+  padding: 10px;
+  color: #000;
+}
+
+.about-item .active{
+  /*color: #fff;*/
+  color: rgb(198, 13, 34);
+  font-weight: bolder;
+  /*border-radius: 7px;*/
+}
+
+.nav {
+  border-bottom: 1px solid;
+  padding: 10px;
+  border-color: #ddd;
 }
