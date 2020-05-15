@@ -150,19 +150,14 @@ h2 {
 	.section-footer {
 		margin-bottom: 1.3em;
 	}
-	
-	#contatos-footer a {
-		float: left;
-		clear: both;
-		margin-bottom: 0.6em;
-	}
-	
-	#contatos-footer a {
-		margin-left: 1em;
-	
+  
+  #contatos-footer li {
+    text-align: center;
+  }
 
-		
-	}
+
+	
+	
 	
 
 	
@@ -179,16 +174,11 @@ h2 {
 	.section-footer {
 		margin-bottom: 1.3em;
 	}
-	
 
-	
-	#contatos-footer {
-		padding: auto;
-	}
-	
-	#contatos-footer a {
+
+	#contatos-footer li a {
 		padding-left: 1em;
-		margin-right: 2em;
+
 	}	
 	
 
