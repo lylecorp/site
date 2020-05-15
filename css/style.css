@@ -2103,7 +2103,31 @@ figure figcaption {
 }
 
 .nav {
-  border-bottom: 1px solid;
+  border-bottom: 1px dotted #999;
   padding: 10px;
-  border-color: #ddd;
 }
+
+/*@media only screen and (min-width: 768px) {    
+  .our-purpose-items {
+    border-right: 1px dotted #999; 
+  }
+}*/
+
+.our-purpose-items img {
+  margin-right: 10%;
+  float: left;
+
+}
+
+.our-purpose-items h3 { 
+  font-size: 30px;
+  margin-bottom: 10%;
+  color:rgb(198, 13, 34);
+}
+
+.our-purpose-items p{
+  color: #333;
+}
+
+
+
