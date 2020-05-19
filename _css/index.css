@@ -154,13 +154,6 @@ h2 {
   #contatos-footer li {
     text-align: center;
   }
-
-
-	
-	
-	
-
-	
 	#redes-footer li {
 		display: inline-block;
 	}
@@ -180,10 +173,6 @@ h2 {
 		padding-left: 1em;
 
 	}	
-	
-
-
-		
 	}
 	#redes-footer li {
 		display: inline-block;
@@ -191,8 +180,6 @@ h2 {
 	#redes-footer a {
 	margin-right: -0.2em;
 }
-	
-
 
   @media (min-width: 768px) {
     .site-footer {
@@ -211,13 +198,7 @@ h2 {
   .site-footer .footer-heading {
     font-size: 16px;
     color: #fff;
-	
 }
-
-
-
-
-
 
 .bg-text-line {
   display: inline;
@@ -1782,7 +1763,8 @@ h2 {
 .team-member:hover .social {
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
-  transform: translateX(0%); }
+  transform: translateX(0%);
+  padding: 8px; }
 
 .custom-direction {
   
@@ -2212,4 +2194,8 @@ figure figcaption {
 	background-image: url("../_images/background-lyle-corp.jpg");
 	object-fit: cover;
 	object-position: center;
+}
+
+.btn-comprar {
+	cursor: not-allowed;
 }
