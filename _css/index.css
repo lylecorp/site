@@ -2197,5 +2197,6 @@ figure figcaption {
 }
 
 .btn-comprar {
+  background-color: rgb(169,169,169, .4);
 	cursor: not-allowed;
 }
