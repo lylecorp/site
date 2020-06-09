@@ -2200,3 +2200,8 @@ object-position: center;
 background-color: rgb(169,169,169, .4);
 cursor: not-allowed;
 }
+
+#logo {
+  width: 60%;
+  height: 60%;
+}
