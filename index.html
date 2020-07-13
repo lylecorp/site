@@ -10,7 +10,7 @@
   <meta name="Description"
     content="Lyle Corp - O futuro começa agora. Conheça nossos serviços e cursos focados em ServiceNow.">
   <meta name="keywords"
-    content="Programação, ServiceNow, Service Now, Service-Now, Lyle, LyleCorp, Consultoria, Lyle Corp, ITSM, ITBM, CSM, Instância Compartilhada, Desenvolvimento, Implementação, Implantação, Cursos, Corporation">
+    content="Programação, ServiceNow, Service Now, Service-Now, Lyle, LyleCorp, Consultoria, Lyle Corp, ITSM, ITBM, CSM, Instância Compartilhada, Desenvolvimento, Implementação, Implantação, Cursos, Corporation, Cursos de ServiceNow, Cursos de Service-Now">
   <meta name="geo.region" content="BR-SP">
   <meta name="geo.placename" content="S&atilde;o Paulo">
   <meta name="geo.position" content="-23.550651;-46.633382">
@@ -45,7 +45,8 @@
   <link rel="stylesheet" href="_css/index.css">
 </head>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" ng-app="indexApp"
+  ng-controller="indexController">
   <div id="overlayer"></div>
   <div class="loader">
     <div class="spinner-border text-pink" role="status"> <span class="sr-only">Loading...</span> </div>
@@ -148,77 +149,74 @@
         </div>
       </div>
       <div class="row align-items-stretch">
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-          <div class="unit-4">
-            <div class="unit-4-icon mr-4"><span><img src="_images/itsm.png" alt="Ícone ITSM da Lyle Corp" /></span>
+        <div data-toggle="modal" data-target=".modal-detail-service"
+          class="col-md-6 col-lg-4 mb-4 mb-lg-4 cursor-pointer" data-aos="fade-up" data-aos-delay="100"
+          ng-repeat="service in services" ng-click="setServiceSelected(service)">
+          <div class="unit-4 disappear">
+            <div class="unit-4-icon mr-4"><span><img ng-src="{{service.image.src}}" alt="{{service.image.alt}}"></span>
             </div>
             <div>
-              <h3>ITSM - Gestão de Serviços</h3>
-              <p>Transforme o impacto, a velocidade e a entrega da TI. Forneça serviços incríveis, aumente a
-                produtividade e obtenha novas idéias.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="unit-4">
-            <div class="unit-4-icon mr-4"><span><img src="_images/itbm.png" alt="Ícone ITBM da Lyle Corp" /></span>
-            </div>
-            <div>
-              <h3>ITBM - Gestão de Projetos</h3>
-              <p>Entregue resultados ao negócio com velocidade e agilidade. Alinhe o trabalho às prioridades da
-                empresa, redirecione os gastos e acelere o tempo para obter valor.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="unit-4">
-            <div class="unit-4-icon mr-4"><span><img src="_images/csm-lyle-corp.png"
-                  alt="Ícone CSM da Lyle Corp" /></span></div>
-            <div>
-              <h3>CSM - Gestão de atendimento ao Cliente</h3>
-              <p>Conecte o negócio com a TI e atenda as solicitações dos clientes de forma simples.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="unit-4">
-            <div class="unit-4-icon mr-4"><span><img src="_images/domain-separation-lyle-corp.png"
-                  alt="Ícone Recursos Compartilhados da Lyle Corp"></span></div>
-            <div>
-              <h3>Recursos Compartilhados</h3>
-              <p>Usufrua dos módulos da plataforma <strong class="text-pink">ServiceNow</strong> mesmo sem obter uma
-                instância.
-                Problemas com custo? Nós podemos te ajudar!</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="">
-          <div class="unit-4">
-            <div class="unit-4-icon mr-4"><span><img src="_images/customization-lyle-corp.png"
-                  alt="Ícone Desenvolvimento da Lyle Corp"></span></div>
-            <div>
-              <h3>Desenvolvimento</h3>
-              <p>Automatize processos de forma rápida. <br>
-                Crie aplicações modernas e seguras utilizando a plataforma <strong
-                  class="text-pink">ServiceNow</strong>.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="unit-4">
-            <div class="unit-4-icon mr-4"><span><img src="_images/support.png" alt="Ícone Suporte da Lyle Corp"></span>
-            </div>
-            <div>
-              <h3>Suporte</h3>
-              <p>Garanta a saúde dos produtos <strong class="text-pink">ServiceNow</strong> implantados. Com nosso
-                suporte você pode desenvolver
-                melhorias e correções nas suas Aplicações.</p>
+              <h3 class="text-white">{{service.title}}</h3>
+              <p>{{service.shortDescription}}</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+
+  <!--INICIO DO MODAL-->
+
+  <div id="modalDetailService" class="modal fade modal-detail-service" tabindex="-1" role="dialog" aria-labelledby="modalDetailService"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="text-pink"><img class="mr-4" ng-src="{{serviceSelected.image.src}}"
+              alt="{{serviceSelected.image.alt}}"> {{serviceSelected.title}}</h5>
+        </div>
+        <div class="modal-body">
+          <ul class="nav nav-tabs mb-4" id="tabsServices" role="tablist">
+            <li class="nav-item" >
+              <a class="nav-link active" id="benefits-tab" data-toggle="tab" href="#benefits" role="tab" aria-controls="benefits"
+                aria-selected="false">Vantagens</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="featuresTab" data-toggle="tab" href="#features" role="tab" aria-controls="features"
+                aria-selected="true">Funcionalidades</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="demonstration-tab" data-toggle="tab" href="#demonstration" role="tab" aria-controls="demonstration"
+                aria-selected="false">Demonstração</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="contentsServices">
+            <div class="tab-pane fade show active" id="benefits" role="tabpanel" aria-labelledby="benefits-tab">
+              <ul class="list-unstyled ul-check primary">
+                <li ng-repeat="benefit in serviceSelected.benefits">{{benefit}}</li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="features" role="tabpanel" aria-labelledby="features-tab">
+              <ul class="list-unstyled ul-check primary">
+                <li ng-repeat="feature in serviceSelected.features">{{feature}}</li>
+              </ul>
+            </div>
+            <div class="tab-pane fade" id="demonstration" role="tabpanel" aria-labelledby="demonstration-tab">
+              <iframe class="detailServiceVideo" id="player" src="https://www.youtube.com/embed/dGooMB4Gdt0?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Solicitar</button>
+          <button type="button" class="btn btn-secondary" id="close-modal" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--FIM DO MODAL-->
+
   <section class="site-section bg-light" id="courses-section">
     <div class="container">
       <div class="row mb-5 justify-content-center">
@@ -310,8 +308,11 @@
       </div>
     </div>
   </footer>
-  </div>
+
   <!-- .site-wrap -->
+
+  <script src="js/angular.js"></script>
+  <script src="js/indexApp.js"></script>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-ui.js"></script>
   <script src="js/popper.min.js"></script>
@@ -325,6 +326,9 @@
   <script src="js/isotope.pkgd.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/typed.js"></script>
+  <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
+
+
 </body>
 
 </html>

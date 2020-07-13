@@ -368,3 +368,16 @@ jQuery(document).ready(function($) {
 	});
 
 });
+
+$('.modal-content').css('padding','5%');
+    jQuery('iframe[src*="https://www.youtube.com/embed/dGooMB4Gdt0?enablejsapi=1"]').addClass("youtube-iframe");
+    $('#modalDetailService').on('hidden.bs.modal', function () {
+		$('.youtube-iframe').each(function(index) {
+			
+			$(this).attr('src', $(this).attr('src'));
+			return false;
+		  });
+	});
+/*$('.modal-content img').css('float', 'left');
+$('.modal-content img').css('margin-right', '3%');
+$('.modal-content img').css('margin-bottom', '3%');*/
