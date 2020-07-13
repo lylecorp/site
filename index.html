@@ -186,7 +186,7 @@
               <a class="nav-link" id="featuresTab" data-toggle="tab" href="#features" role="tab" aria-controls="features"
                 aria-selected="true">Funcionalidades</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" ng-show="serviceSelected.video.src">
               <a class="nav-link" id="demonstration-tab" data-toggle="tab" href="#demonstration" role="tab" aria-controls="demonstration"
                 aria-selected="false">Demonstração</a>
             </li>
@@ -203,12 +203,11 @@
               </ul>
             </div>
             <div class="tab-pane fade" id="demonstration" role="tabpanel" aria-labelledby="demonstration-tab">
-              <iframe class="detailServiceVideo" id="player" src="https://www.youtube.com/embed/dGooMB4Gdt0?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe class="detailServiceVideo" id="player"  width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary">Solicitar</button>
           <button type="button" class="btn btn-secondary" id="close-modal" data-dismiss="modal">Fechar</button>
         </div>
       </div>

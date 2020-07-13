@@ -370,7 +370,7 @@ jQuery(document).ready(function($) {
 });
 
 $('.modal-content').css('padding','5%');
-    jQuery('iframe[src*="https://www.youtube.com/embed/dGooMB4Gdt0?enablejsapi=1"]').addClass("youtube-iframe");
+    jQuery('iframe.detailServiceVideo').addClass("youtube-iframe");
     $('#modalDetailService').on('hidden.bs.modal', function () {
 		$('.youtube-iframe').each(function(index) {
 			
