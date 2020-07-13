@@ -53,7 +53,7 @@ app.controller("indexController", function($scope){
                 alt: "Ícone Desenvolvimento da Lyle Corp"
             },
             title: "Desenvolvimento",
-            shortDescription: "Automatize processos de forma rápida. <br> Crie aplicações modernas e seguras utilizando a plataforma ServiceNow."            
+            shortDescription: "Automatize processos de forma rápida. Crie aplicações modernas e seguras utilizando a plataforma ServiceNow."            
         },
 
          
